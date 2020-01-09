@@ -9,7 +9,7 @@
 import Foundation
 
 class Movie {
-    let filePath : String
+    var filePath : String
     static var moviesArr = [Movie]()
     
     init(filePath : String) {

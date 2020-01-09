@@ -23,9 +23,9 @@ class URLUtils
         return imageURL!
     }
     
-    static func getPopularMoviesURL() -> URL {
+    static func getPopularMoviesURL() -> String {
         let popularMoviesStringURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(URLUtils.API_KEY)&language=en-US&page=1"
-        return URL(string: popularMoviesStringURL)!
+        return popularMoviesStringURL
     }
 }
     

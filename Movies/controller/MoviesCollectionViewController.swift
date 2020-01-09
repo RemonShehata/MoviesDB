@@ -7,43 +7,25 @@
 //
 
 import UIKit
+import SDWebImage
 
 private let reuseIdentifier = "Cell"
 
-class MoviesCollectionViewController: UICollectionViewController {
+class MoviesCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        
-        // Do any additional setup after loading the view.
-        
         let n = NetworkingManger()
-        n.getMoviesFromWebService(requestURL: URLUtils.getPopularMoviesURL(), completionHandlerForGetMovies: {(retMovies) in
+        n.getMoviesFromWebService(stringURL: URLUtils.getPopularMoviesURL(), completionHandlerForGetMovies: {(retMovies) in
             Movie.moviesArr = retMovies
             
-            for mov in Movie.moviesArr{
-                //print(mov.filePath)
-                URLUtils.getImageFullURL(posterPath: mov.filePath)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
         })
         
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     // MARK: UICollectionViewDataSource
     
@@ -54,17 +36,22 @@ class MoviesCollectionViewController: UICollectionViewController {
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return Movie.moviesArr.count
+        
+        return Movie.moviesArr.count > 0 ? Movie.moviesArr.count : 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MovieCollectionViewCell
         
         // Configure the cell
-        Movie.moviesArr[indexPath.row].filePath
         
+
+        var currentMovie = Movie.moviesArr[indexPath.row].filePath
+        print(currentMovie)
+        var currentImageURL = URLUtils.getImageFullURL(posterPath: currentMovie)
         
+        cell.imageView.sd_setImage(with: currentImageURL, placeholderImage:UIImage(named: "placeholder.jpg"))
+        //cell.imageView.image = UIImage(named: "placeholder.jpg")
         return cell
     }
     
@@ -98,5 +85,12 @@ class MoviesCollectionViewController: UICollectionViewController {
      
      }
      */
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let imgWidth = collectionView.frame.width/3.0
+        //let imgHeight = collectionView.frame.height / 2.0
+        return CGSize(width: imgWidth, height: imgWidth)
+    }
     
 }
