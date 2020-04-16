@@ -9,10 +9,15 @@
 import Foundation
 
 class Movie {
-    var filePath : String
     static var moviesArr = [Movie]()
     
-    init(filePath : String) {
+    var filePath : String
+    var movieTitle : String
+    var Id : Int
+    
+    init(filePath : String, title : String, id : Int) {
         self.filePath = filePath
+        self.movieTitle = title
+        self.Id = id
     }
 }

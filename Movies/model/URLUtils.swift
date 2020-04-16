@@ -24,8 +24,33 @@ class URLUtils
     }
     
     static func getPopularMoviesURL() -> String {
-        let popularMoviesStringURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(URLUtils.API_KEY)&language=en-US&page=1"
+        let popularMoviesStringURL = "https://api.themoviedb.org/3/movie/popular?api_key=\(API_KEY)&language=en-US&page=1"
         return popularMoviesStringURL
+    }
+    
+    static func getTopRatedMoviesURL() -> String {
+        let topRatedMoviesStringURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=\(API_KEY)&language=en-US&page=1"
+        return topRatedMoviesStringURL
+    }
+    
+    static func getDetialsURL(movieID: Int) -> String {
+        let detialsURL =
+            "https://api.themoviedb.org/3/movie/\(movieID)?api_key=\(URLUtils.API_KEY)&language=en-US"
+        return detialsURL
+    }
+    
+    static func getReleaseDateURL(movieID: String) {
+        
+    }
+    
+    static func getTrailers(MovieID: String) {
+        
+    }
+    
+    static func getReviewsURL(movieID: String) -> String {
+        let detialsURL =
+        "https://api.themoviedb.org/3/movie/\(movieID)?api_key=\(URLUtils.API_KEY)&language=en-US&page=1"
+        return detialsURL
     }
 }
     

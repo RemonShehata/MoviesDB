@@ -7,97 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0E0D5DC3-36CF-4EF4-B08D-27C98F7C7B0D"
+            uuid = "1C550A9E-7835-496A-93A6-B459E035689F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Movies/controller/MoviesCollectionViewController.swift"
+            filePath = "Movies/model/NetworkingManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "getDetialsFromWebService(stringURL:completionHandlerForDetails:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EFCBCAA7-FD90-417A-A3A2-9E2A0AA63914"
+            uuid = "11E88916-DF7C-42F6-B5C3-992B2B3E62C5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Movies/controller/MoviesCollectionViewController.swift"
+            filePath = "Movies/model/NetworkingManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "getDetialsFromWebService(stringURL:completionHandlerForDetails:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EFCBCAA7-FD90-417A-A3A2-9E2A0AA63914 - 33e4abb119ff0ff6"
+                  uuid = "11E88916-DF7C-42F6-B5C3-992B2B3E62C5 - 325bb8b78587e03c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Movies.MoviesCollectionViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "Movies.NetworkingManger.getDetialsFromWebService(stringURL: Swift.String, completionHandlerForDetails: ((Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Int&gt;, Swift.Optional&lt;Swift.Int&gt;)) -&gt; ()) -&gt; ()"
                   moduleName = "Movies"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/remongergesshehata/Desktop/IOS%20with%20Swift%20Labs/Movies/Movies/controller/MoviesCollectionViewController.swift"
+                  urlString = "file:///Users/remongergesshehata/Desktop/IOS%20with%20Swift%20Labs/Movies/Movies/model/NetworkingManger.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "139">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1290">
                </Location>
                <Location
-                  uuid = "EFCBCAA7-FD90-417A-A3A2-9E2A0AA63914 - 7a09554754c88688"
+                  uuid = "11E88916-DF7C-42F6-B5C3-992B2B3E62C5 - a4f26a7cba35ab17"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;Movies.Movie&gt;) -&gt; () in Movies.MoviesCollectionViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Movies.NetworkingManger.getDetialsFromWebService(stringURL: Swift.String, completionHandlerForDetails: ((Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Int&gt;, Swift.Optional&lt;Swift.Int&gt;)) -&gt; ()) -&gt; ()"
                   moduleName = "Movies"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/remongergesshehata/Desktop/IOS%20with%20Swift%20Labs/Movies/Movies/controller/MoviesCollectionViewController.swift"
+                  urlString = "file:///Users/remongergesshehata/Desktop/IOS%20with%20Swift%20Labs/Movies/Movies/model/NetworkingManger.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "167">
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "1856">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3E33500F-954E-4753-83D3-B5A3D105850A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Movies/controller/MoviesCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "957CCFE4-E266-46E3-B3DB-D373C41A1A92"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Movies/controller/MoviesCollectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
